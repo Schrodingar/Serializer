@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Arrays;
 
 public class Serializer {
 
@@ -15,18 +14,6 @@ public class Serializer {
         return out.toByteArray();
     }
 
-    public static String toStringByteArray(byte[] data) {
-        String str = "i";
-        for (int i = 0; i < data.length; i++) {
-            str += data[i];
-            if (i < data.length - 1) {
-                str += ", ";
-            }
-        }
-        str = str.substring(1);
-        return str;
-    }
-
     public static Object deserialize(byte[] data) {
         ByteArrayInputStream in = new ByteArrayInputStream(data);
         ObjectInputStream is;
@@ -38,5 +25,25 @@ public class Serializer {
         }
         return null;
     }
+
+    public static void writeInFile(byte[] array, String filePath) {
+        try (FileOutputStream fos = new FileOutputStream(filePath)) {
+            fos.write(array, 0, array.length);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static byte[] rearFromFile(String filePath) {
+        try (FileInputStream fin = new FileInputStream(filePath)) {
+            byte[] buffer = new byte[fin.available()];
+            fin.read(buffer, 0, fin.available());
+            return buffer;
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        return null;
+    }
+
 }
 

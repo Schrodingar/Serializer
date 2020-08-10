@@ -1,8 +1,0 @@
-<application>
-  <component name="FileTypeManager" version="17">
-    <extensionMap>
-      <mapping pattern="pom" type="MavenConfig" />
-      <mapping pattern="note" type="PLAIN_TEXT" />
-    </extensionMap>
-  </component>
-</application>
