@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="pom" type="MavenConfig" />
       <mapping pattern="note" type="PLAIN_TEXT" />
+      <mapping ext="ser" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
