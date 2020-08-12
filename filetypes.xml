@@ -5,6 +5,7 @@
       <mapping pattern="file" type="PLAIN_TEXT" />
       <mapping pattern="note" type="PLAIN_TEXT" />
       <mapping ext="ser" type="PLAIN_TEXT" />
+      <mapping ext="out" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
